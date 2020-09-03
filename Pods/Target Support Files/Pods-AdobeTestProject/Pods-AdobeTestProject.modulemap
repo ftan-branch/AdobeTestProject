@@ -1,0 +1,6 @@
+framework module Pods_AdobeTestProject {
+  umbrella header "Pods-AdobeTestProject-umbrella.h"
+
+  export *
+  module * { export * }
+}
