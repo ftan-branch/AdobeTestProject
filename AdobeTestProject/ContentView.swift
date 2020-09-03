@@ -7,15 +7,23 @@
 //
 
 import SwiftUI
+import ACPCore
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-                Text("Hello, World!")
+        VStack(alignment: .center, spacing: 50) {
+                Text("Event Menu")
             Button(action: {
-                print("pressed button")
+                ACPCore.trackAction("ADD_TO_CART", data: [
+                    "name": "Branch Cap",
+                    "revenue": "65.42",
+                    "currency": "USD",
+                    "timestamp": String(Date.timeIntervalSinceReferenceDate),
+                    "category": "hats",
+                    "sku": "sku-code-here"
+                ])
             }) {
-                Text("add_to_cart!")
+                Text("log ADD_TO_CART")
             }
         }
     }
