@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         ACPCore.setLogLevel(.debug)
         ACPCore.configure(withAppId: "d10f76259195/0d70362f5752/launch-999223127273-development")
-        
         ACPAnalytics.registerExtension()
         ACPIdentity.registerExtension()
         ACPLifecycle.registerExtension()
@@ -33,10 +32,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("error registering AdobeBranchExtension")
         }
         
-        
         ACPCore.start {
             ACPCore.lifecycleStart(nil)
         }
+        
+        Branch.getInstance().enableLogging()
+        AdobeBranchExtension.initSession(launchOptions: [:]) { (params, error) in
+            if let error = error {
+                print("error! message: ", error)
+                return
+            }
+            
+            guard let params = params else {
+                print("error unwrapping params")
+                return
+            }
+            
+            print("deeplinking params")
+            print(params)
+        }
+        
         return true
     }
 
