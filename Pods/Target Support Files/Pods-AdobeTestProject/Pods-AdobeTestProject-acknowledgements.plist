@@ -252,6 +252,16 @@ ACP_SDK_Agreement_en_US-20180925_v1
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>Adobe.  All Rights Reserved.</string>
+			<key>License</key>
+			<string>Commercial</string>
+			<key>Title</key>
+			<string>ACPGriffon</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>ADOBE CLOUD PLATFORM SOFTWARE DEVELOPMENT KIT LICENSE AGREEMENT
 ----------------------------------------------------------------
 **Effective Date:**  first date you select “I Agree” or use the SDK

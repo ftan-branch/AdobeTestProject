@@ -227,6 +227,10 @@ For U.S. Government procurements, the ACP SDK is a commercial computer software 
 ACP_SDK_Agreement_en_US-20180925_v1
 
 
+## ACPGriffon
+
+Adobe.  All Rights Reserved.
+
 ## ACPUserProfile
 
 ADOBE CLOUD PLATFORM SOFTWARE DEVELOPMENT KIT LICENSE AGREEMENT

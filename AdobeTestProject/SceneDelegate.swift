@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftUI
+import ACPGriffon
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -29,6 +30,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window = window
             window.makeKeyAndVisible()
         }
+    }
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        ACPGriffon.startSession(URLContexts.first!.url)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

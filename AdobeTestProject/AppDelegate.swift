@@ -11,6 +11,7 @@ import ACPCore
 import AdobeBranchExtension.AdobeBranchExtension
 import ACPAnalytics
 import ACPUserProfile
+import ACPGriffon
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ACPLifecycle.registerExtension()
         ACPSignal.registerExtension()
         ACPUserProfile.registerExtension()
+        ACPGriffon.registerExtension()
         
         do {
             try ACPCore.registerExtension(AdobeBranchExtension.self)
@@ -36,7 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             ACPCore.lifecycleStart(nil)
         }
         
-        Branch.getInstance().enableLogging()
+        AdobeBranchExtension.configureEventTypes(nil, andEventSources: nil)
+        
         AdobeBranchExtension.initSession(launchOptions: [:]) { (params, error) in
             if let error = error {
                 print("error! message: ", error)
@@ -51,9 +54,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("deeplinking params")
             print(params)
         }
-        
+
+        //        xcrun simctl openurl booted 'adobetestproject://hello?adb_validation_sessionid=07bfa87d-4fb3-4170-85bb-4dea46563c6c'
         return true
     }
+    
+/*
+     This does not apply since I'm using SceneDelegate
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        do {
+            ACPGriffon.startSession(url)
+            return false
+        }
+    }
+     */
 
     // MARK: UISceneSession Lifecycle
 

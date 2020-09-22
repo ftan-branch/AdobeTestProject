@@ -8,11 +8,12 @@
 
 import SwiftUI
 import ACPCore
+import Branch
 
 struct ContentView: View {
     var body: some View {
         VStack(alignment: .center, spacing: 50) {
-                Text("Event Menu")
+            Text("Event Menu")
             Button(action: {
                 ACPCore.trackAction("ADD_TO_CART", data: [
                     "name": "Branch Cap",
@@ -22,6 +23,13 @@ struct ContentView: View {
                     "category": "hats",
                     "sku": "sku-code-here"
                 ])
+                
+                Branch.getInstance().lastAttributedTouchData(withAttributionWindow: 7) { (data) in
+                    guard let data = data else {
+                        return
+                    }
+                    print(data)
+                }
             }) {
                 Text("log ADD_TO_CART")
             }
@@ -34,3 +42,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+    

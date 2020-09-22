@@ -7,6 +7,11 @@ PODS:
   - ACPCore (2.7.3):
     - ACPCore/main (= 2.7.3)
   - ACPCore/main (2.7.3)
+  - ACPGriffon (1.2.0):
+    - ACPCore
+    - ACPGriffon/iOS (= 1.2.0)
+  - ACPGriffon/iOS (1.2.0):
+    - ACPCore
   - ACPUserProfile (2.1.0):
     - ACPCore (~> 2.0)
     - ACPUserProfile/iOS (= 2.1.0)
@@ -19,6 +24,7 @@ PODS:
 
 DEPENDENCIES:
   - ACPAnalytics (~> 2.0)
+  - ACPGriffon
   - ACPUserProfile (~> 2.0)
   - AdobeBranchExtension
 
@@ -26,6 +32,7 @@ SPEC REPOS:
   trunk:
     - ACPAnalytics
     - ACPCore
+    - ACPGriffon
     - ACPUserProfile
     - AdobeBranchExtension
     - Branch
@@ -33,10 +40,11 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   ACPAnalytics: 10b531c3c45f665748cf81a9e18f20266097605b
   ACPCore: 775f513687127325d980dba5721b08ea3d5ea79a
+  ACPGriffon: 53b524a9366c34968cce9b4eba50cbf72d0221d8
   ACPUserProfile: 934b0d8136dc8b4c71e95c347ae733c4482d5b9d
   AdobeBranchExtension: 42e80e28f84e29b9d34a0ffb254a79b9f749736e
   Branch: 9a37f707974a128c37829033c49018b79c7e7a2d
 
-PODFILE CHECKSUM: 4ba755caf10dada4972f4427d311b23ba7de7388
+PODFILE CHECKSUM: ba8e3cb36606aa78abd80fedcaa0d7a98a536df8
 
 COCOAPODS: 1.9.1

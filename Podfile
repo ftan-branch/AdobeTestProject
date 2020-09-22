@@ -13,4 +13,6 @@ target 'AdobeTestProject' do
   
   pod 'AdobeBranchExtension'
 
+  pod 'ACPGriffon'
+
 end
