@@ -17,10 +17,10 @@
 #import "ACPExtensionError.h"
 #import "ACPExtensionEvent.h"
 #import "ACPExtensionListener.h"
-#import "ACPIdentity.h"
-#import "ACPLifecycle.h"
 #import "ACPMobileVisitorId.h"
 #import "ACPNetworkServiceOverrider.h"
+#import "ACPIdentity.h"
+#import "ACPLifecycle.h"
 #import "ACPSignal.h"
 
 FOUNDATION_EXPORT double ACPCoreVersionNumber;

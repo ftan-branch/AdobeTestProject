@@ -103,8 +103,43 @@ NSString *const ABEAdobeAnalyticsExtension = @"com.adobe.module.analytics";
     if ([self.api registerWildcardListener:AdobeBranchExtensionListener.class error:&error]) {
         BNCLogDebug(@"BranchExtensionRuleListener was registered.");
     } else {
-        BNCLogError(@"Can't register AdobeBranchExtensionRuleListener: %@.", error);
+//        BNCLogError(@"Can't register AdobeBranchExtensionRuleListener: %@.", error);
     }
+    
+    /*
+     seems that only lowercase keys will work.
+     Any nested JSON, "_", ".", capitalized letters, or dashes will break the substitution.
+     */
+    NSDictionary* newEventData = @{
+                   @"idfa": @"here is a test IDFA",
+                   @"useragent": @"Mozilla/5.0 (iPhone; CPU OS 14_3 like Mac OS X; en_US)"
+    };
+    
+//    NSDictionary* newEventData = @{
+//                   @"idfa": @"here is a test IDFA",
+//                   @"useragent": @"Mozilla/5.0 (iPhone; CPU OS 14_3 like Mac OS X; en_US)",
+//                   @"idfa.period": @"here is an idfa with period",
+//                   @"idfa_with_underscores": @"idfa with underscores",
+//                   @"idfaWithCaps": @"idfa With Caps",
+//                   @"IDFA_with_Caps_and_underscores": @"idfa with caps and underscores",
+//                   @"nested1": @{
+//                           @"idfa": @"here is nested1 test IDFA",
+//                           @"idfa_with_underscores": @"nested1 idfa with underscores",
+//                           @"idfaWithCaps": @"nested1 idfa With Caps",
+//                           @"IDFA_with_Caps_and_underscores": @"nested1 idfa with caps and underscores",
+//                           @"nested2": @{
+//                                   @"idfa": @"here is nested2 test IDFA",
+//                                   @"idfa_with_underscores": @"nested2 idfa with underscores",
+//                                   @"idfaWithCaps": @"nested2 idfa With Caps",
+//                                   @"IDFA_with_Caps_and_underscores": @"nested2 idfa with caps and underscores",
+//                           }
+//                   }
+//    };
+
+     error = nil;
+     if (![self.api setSharedEventState:newEventData event:nil error:&error] && error) {
+         NSLog(@"Error setting default shared state %@:%ld", [error domain], [error code]);
+     }
     return self;
 }
 
@@ -117,7 +152,7 @@ NSString *const ABEAdobeAnalyticsExtension = @"com.adobe.module.analytics";
 }
 
 - (void)handleEvent:(ACPExtensionEvent*)event {
-    BNCLogDebug(@"Event: %@", event);
+//    BNCLogDebug(@"Event: %@", event);
 
     if ([[AdobeBranchExtensionConfig instance].eventTypes containsObject:event.eventType] &&
         [[AdobeBranchExtensionConfig instance].eventSources containsObject:event.eventSource]) {

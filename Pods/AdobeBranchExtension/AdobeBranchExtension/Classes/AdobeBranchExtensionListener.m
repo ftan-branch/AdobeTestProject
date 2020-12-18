@@ -12,10 +12,10 @@
 @implementation AdobeBranchExtensionListener
 
 - (void) hear:(ACPExtensionEvent*)event {
-    BNCLogDebug(@"Event: %@", event);
+//    BNCLogDebug(@"Event: %@", event);
     AdobeBranchExtension*branchExtension = (AdobeBranchExtension*) self.extension;
     if (![branchExtension isKindOfClass:AdobeBranchExtension.class]) {
-        BNCLogDebug(@"Skipping: Parent extension is of type %@.", NSStringFromClass(branchExtension.class));
+//        BNCLogDebug(@"Skipping: Parent extension is of type %@.", NSStringFromClass(branchExtension.class));
         return;
     }
     [branchExtension handleEvent:event];

@@ -12,6 +12,8 @@ import AdobeBranchExtension.AdobeBranchExtension
 import ACPAnalytics
 import ACPUserProfile
 import ACPGriffon
+import AdSupport
+import AppTrackingTransparency
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,7 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        ACPCore.setLogLevel(.debug)
+        ACPCore.setLogLevel(.verbose)
+        BNCLogSetDisplayLevel(.all)
+        
         ACPCore.configure(withAppId: "d10f76259195/0d70362f5752/launch-999223127273-development")
         ACPAnalytics.registerExtension()
         ACPIdentity.registerExtension()
@@ -40,6 +44,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         AdobeBranchExtension.configureEventTypes(nil, andEventSources: nil)
         
+//        xcrun simctl openurl booted https://ftan-branch.app.link/?hello=there
+        
         AdobeBranchExtension.initSession(launchOptions: [:]) { (params, error) in
             if let error = error {
                 print("error! message: ", error)
@@ -54,8 +60,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("deeplinking params")
             print(params)
         }
+        
+//        if #available(iOS 14, *) {
+//           setAdvertisingIdentitiferUsingTrackingManager()
+//        } else {
+//           // Fallback on earlier versions
+//           setAdvertisingIdentifierUsingIdentifierManager()
+//        }
 
-        //        xcrun simctl openurl booted 'adobetestproject://hello?adb_validation_sessionid=07bfa87d-4fb3-4170-85bb-4dea46563c6c'
+        //        xcrun simctl openurl booted 'adobetestproject://?adb_validation_sessionid=9b7762c1-d717-4654-9152-e8984a834083'
         return true
     }
     

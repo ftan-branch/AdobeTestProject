@@ -70,8 +70,8 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>branch_app_domain</key>
-	<string>ftan-branch.test-app.link</string>
+	<string>ftan-branch.app.link</string>
 	<key>branch_key</key>
-	<string>key_test_ilNmXr2O4Mcx53oODlZdthhlFFmKRE2z</string>
+	<string>key_live_iiSj3B1NXPps47pTwd3gflkiBFkVTEYm</string>
 </dict>
 </plist>

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		560FA2F686E7498B95A6FADF /* Pods_AdobeTestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCBAA627187333990854223B /* Pods_AdobeTestProject.framework */; };
+		3DB60044321ADBAD8B4A1519 /* Pods_AdobeTestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC148BD964D2062229ACCD5 /* Pods_AdobeTestProject.framework */; };
 		F6BA885025018B1C006ADE6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BA884F25018B1C006ADE6D /* AppDelegate.swift */; };
 		F6BA885225018B1C006ADE6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BA885125018B1C006ADE6D /* SceneDelegate.swift */; };
 		F6BA885425018B1C006ADE6D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BA885325018B1C006ADE6D /* ContentView.swift */; };
@@ -17,9 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		21100FA9016791049A1CDFAA /* Pods-AdobeTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdobeTestProject.release.xcconfig"; path = "Target Support Files/Pods-AdobeTestProject/Pods-AdobeTestProject.release.xcconfig"; sourceTree = "<group>"; };
-		BEDC79DF6C72D0AAEF5941A8 /* Pods-AdobeTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdobeTestProject.debug.xcconfig"; path = "Target Support Files/Pods-AdobeTestProject/Pods-AdobeTestProject.debug.xcconfig"; sourceTree = "<group>"; };
-		CCBAA627187333990854223B /* Pods_AdobeTestProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdobeTestProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		665EEE561EF1A4BFB83D2AE3 /* Pods-AdobeTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdobeTestProject.debug.xcconfig"; path = "Target Support Files/Pods-AdobeTestProject/Pods-AdobeTestProject.debug.xcconfig"; sourceTree = "<group>"; };
+		7EC148BD964D2062229ACCD5 /* Pods_AdobeTestProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdobeTestProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99159DBAFE408A637813766B /* Pods-AdobeTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdobeTestProject.release.xcconfig"; path = "Target Support Files/Pods-AdobeTestProject/Pods-AdobeTestProject.release.xcconfig"; sourceTree = "<group>"; };
 		F6788F5A2511582B00185174 /* AdobeTestProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AdobeTestProject.entitlements; sourceTree = "<group>"; };
 		F6BA884C25018B1C006ADE6D /* AdobeTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdobeTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6BA884F25018B1C006ADE6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,28 +36,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				560FA2F686E7498B95A6FADF /* Pods_AdobeTestProject.framework in Frameworks */,
+				3DB60044321ADBAD8B4A1519 /* Pods_AdobeTestProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		24B11FA5FF74CF4B00773935 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				CCBAA627187333990854223B /* Pods_AdobeTestProject.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		5EC4E14F013C4C9BC3909D3B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BEDC79DF6C72D0AAEF5941A8 /* Pods-AdobeTestProject.debug.xcconfig */,
-				21100FA9016791049A1CDFAA /* Pods-AdobeTestProject.release.xcconfig */,
+				665EEE561EF1A4BFB83D2AE3 /* Pods-AdobeTestProject.debug.xcconfig */,
+				99159DBAFE408A637813766B /* Pods-AdobeTestProject.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B86FD70E611F0F72CA114853 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EC148BD964D2062229ACCD5 /* Pods_AdobeTestProject.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F6BA884325018B1B006ADE6D = {
@@ -66,7 +66,7 @@
 				F6BA884E25018B1C006ADE6D /* AdobeTestProject */,
 				F6BA884D25018B1C006ADE6D /* Products */,
 				5EC4E14F013C4C9BC3909D3B /* Pods */,
-				24B11FA5FF74CF4B00773935 /* Frameworks */,
+				B86FD70E611F0F72CA114853 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,11 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6BA886025018B1F006ADE6D /* Build configuration list for PBXNativeTarget "AdobeTestProject" */;
 			buildPhases = (
-				608672D409A9FEAB5042ED45 /* [CP] Check Pods Manifest.lock */,
+				FD67F096BDE086B799CC08BA /* [CP] Check Pods Manifest.lock */,
 				F6BA884825018B1C006ADE6D /* Sources */,
 				F6BA884925018B1C006ADE6D /* Frameworks */,
 				F6BA884A25018B1C006ADE6D /* Resources */,
-				DB201FA3CA9B2B7DCCCE3066 /* [CP] Embed Pods Frameworks */,
+				88E30CE949799300366E6318 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -173,7 +173,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		608672D409A9FEAB5042ED45 /* [CP] Check Pods Manifest.lock */ = {
+		88E30CE949799300366E6318 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AdobeTestProject/Pods-AdobeTestProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AdobeTestProject/Pods-AdobeTestProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdobeTestProject/Pods-AdobeTestProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD67F096BDE086B799CC08BA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -193,23 +210,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DB201FA3CA9B2B7DCCCE3066 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AdobeTestProject/Pods-AdobeTestProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AdobeTestProject/Pods-AdobeTestProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdobeTestProject/Pods-AdobeTestProject-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -355,7 +355,7 @@
 		};
 		F6BA886125018B1F006ADE6D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BEDC79DF6C72D0AAEF5941A8 /* Pods-AdobeTestProject.debug.xcconfig */;
+			baseConfigurationReference = 665EEE561EF1A4BFB83D2AE3 /* Pods-AdobeTestProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = AdobeTestProject/AdobeTestProject.entitlements;
@@ -377,7 +377,7 @@
 		};
 		F6BA886225018B1F006ADE6D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21100FA9016791049A1CDFAA /* Pods-AdobeTestProject.release.xcconfig */;
+			baseConfigurationReference = 99159DBAFE408A637813766B /* Pods-AdobeTestProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = AdobeTestProject/AdobeTestProject.entitlements;
