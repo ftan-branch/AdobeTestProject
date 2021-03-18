@@ -24,12 +24,12 @@ struct ContentView: View {
                     "sku": "sku-code-here"
                 ])
                 
-                Branch.getInstance().lastAttributedTouchData(withAttributionWindow: 7) { (data) in
-                    guard let data = data else {
-                        return
-                    }
-                    print(data)
-                }
+//                Branch.getInstance().lastAttributedTouchData(withAttributionWindow: 7) { (data) in
+//                    guard let data = data else {
+//                        return
+//                    }
+//                    print(data)
+//                }
             }) {
                 Text("log ADD_TO_CART")
             }

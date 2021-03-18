@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        ACPCore.setLogLevel(.verbose)
+//        ACPCore.setLogLevel(.verbose)
         BNCLogSetDisplayLevel(.all)
         
         ACPCore.configure(withAppId: "d10f76259195/0d70362f5752/launch-999223127273-development")
@@ -42,10 +42,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             ACPCore.lifecycleStart(nil)
         }
         
-        AdobeBranchExtension.configureEventTypes(nil, andEventSources: nil)
+        AdobeBranchExtension.configureEventTypes(nil, andEventSources:nil)
         
 //        xcrun simctl openurl booted https://ftan-branch.app.link/?hello=there
-        
+        BNCLogSetDisplayLevel(.all)
+        Branch.getInstance().enableLogging()
         AdobeBranchExtension.initSession(launchOptions: [:]) { (params, error) in
             if let error = error {
                 print("error! message: ", error)
@@ -56,9 +57,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("error unwrapping params")
                 return
             }
-            
-            print("deeplinking params")
-            print(params)
+//
+//            print("deeplinking params")
+//            print(params)
         }
         
 //        if #available(iOS 14, *) {
